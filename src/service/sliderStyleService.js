@@ -6,8 +6,6 @@ angular.module('jsl.slider').factory('$jslSliderStyleService', () => {
     if (margin > getMarginLimit(config) ) {
       margin = getMarginLimit(config);
     }
-
-    console.log(margin);
     return formatCssPercentage( -margin );
   }
 
