@@ -20,11 +20,22 @@ module.exports = function(grunt) {
       unit: {
         configFile: '.tmp/test/config/karma.conf.js'
       }
+    },
+    connect: {
+      dev: {
+        options: {
+          port: 8001,
+          keepalive: true,
+          base: ['demo', 'bower_components', '.tmp'],
+          open: true
+        }
+      }
     }
 
   });
 
 
   grunt.registerTask('test', ['clean:all', 'shell:transformSrc', 'shell:transformTest', 'karma:unit', 'clean:all']);
+  grunt.registerTask('serve', ['clean:src', 'shell:transformSrc', 'connect:dev']);
 
 }

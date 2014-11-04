@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app="jsl.slider.demo">
+  <head>
+    <title>JSL Slider</title>
+    <link rel="stylesheet" href="demo.css">
+
+    <script src="angular/angular.js"></script>
+    <script src="src/app.js"></script>
+    <script src="src/service/sliderService.js"></script>
+    <script src="src/service/sliderStyleService.js"></script>
+    <script src="src/directive/sliderDirective.js"></script>
+    <script>
+      angular.module('jsl.slider.demo', ['jsl.slider']);
+    </script>
+  </head>
+  <body>
+
+    <div id="my-slider" jsl-slider jsl-slider-display="2" jsl-slider-steps="2">
+      <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+      </ul>
+    </div>
+  </body>
+</html>
