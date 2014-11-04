@@ -2,11 +2,17 @@ angular.module('jsl.slider').factory('$jslSliderStyleService', () => {
 
 
   function getMarginLeft(config) {
-    var margin = (100 * config.position) / config.slides;
-    if (margin > 100 * config.size) {
-      margin = 100 * config.size;
+    var margin = (100 * config.position * config.steps) / config.slides;
+    if (margin > getMarginLimit(config) ) {
+      margin = getMarginLimit(config);
     }
+
+    console.log(margin);
     return formatCssPercentage( -margin );
+  }
+
+  function getMarginLimit(config){
+    return (100 / config.slides) * (config.size - config.slides);
   }
 
   function setUpSliderStyle(wrapper, ul, config) {
@@ -27,6 +33,8 @@ angular.module('jsl.slider').factory('$jslSliderStyleService', () => {
     ul.style.transition = "margin 0.5s ease-in-out";
 
     for( var i = 0; i < lis.length; i++ ){
+      lis[i].style.margin = '0';
+      lis[i].style.padding = '0';
       lis[i].style.width = formatCssPercentage(100 / (lis.length * config.slides));
       lis[i].style.float = 'left';
       lis[i].style.boxSizing = 'border-box';

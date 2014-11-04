@@ -8,21 +8,25 @@ angular.module('jsl.slider').factory('$jslSliderService', ($jslSliderStyleServic
       lis = ul.children;
       position = position || 0;
       slides = config.slides || 1
-      steps = slides || 1;
+      steps = config.steps, slides || 1;
 
       $jslSliderStyleService.setUpSliderStyle(element[0], ul, {slides: slides});
     }
 
+    function getMaxPosition() {
+      return Math.ceil( (lis.length - slides) / steps );
+    }
+
     function moveNext() {
-      if (position < (lis.length - steps) ) {
-        position += steps;
+      if (position < getMaxPosition() ) {
+        position += 1;
       }
       updateSliderOnScreen();
     }
 
     function movePrev() {
-      if (position >= steps) {
-        position -= steps;
+      if (position > 0) {
+        position -= 1;
       }
       updateSliderOnScreen();
     }
@@ -31,7 +35,8 @@ angular.module('jsl.slider').factory('$jslSliderService', ($jslSliderStyleServic
       ul.style.marginLeft = $jslSliderStyleService.getMarginLeft({
         size: lis.length,
         position: position,
-        slides: slides
+        slides: slides,
+        steps: steps
       });
     }
 
