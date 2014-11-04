@@ -1,0 +1,25 @@
+{
+  "name": "jsl-slider",
+  "version": "0.0.0",
+  "authors": [
+    "jeferson.leao <jeferson.leao@ideais.com.br>"
+  ],
+  "description": "carousel plugin for use with angularjs",
+  "main": "dist/jsl-slider.js",
+  "keywords": [
+    "slider",
+    "carousel",
+    "angular"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "angular-mocks": "~1.3.1"
+  }
+}

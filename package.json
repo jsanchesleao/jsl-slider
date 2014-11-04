@@ -1,0 +1,29 @@
+{
+  "name": "jsl-slider",
+  "version": "0.0.0",
+  "description": "",
+  "main": "Gruntfile.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha test"
+  },
+  "author": "jsanchesleao@gmail.com",
+  "license": "BSD-2-Clause",
+  "devDependencies": {
+    "load-grunt-tasks": "~1.0.0",
+    "grunt-6to5": "~1.0.1",
+    "grunt": "~0.4.5",
+    "6to5": "~1.10.10",
+    "grunt-shell": "~1.1.1",
+    "grunt-contrib-clean": "~0.6.0",
+    "karma": "~0.12.24",
+    "grunt-karma": "~0.9.0",
+    "karma-phantomjs-launcher": "~0.1.4",
+    "mocha": "~2.0.1",
+    "karma-mocha": "~0.1.9",
+    "chai": "~1.9.2",
+    "karma-chai": "~0.1.0"
+  }
+}
