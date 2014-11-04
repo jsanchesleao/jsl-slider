@@ -3,16 +3,18 @@ angular.module('jsl.slider')
     return {
       restrict: 'A',
       link: (scope, elem, attrs) => {
-        var slider = $jslSliderService.createSlider(elem, {
+        window.slider = $jslSliderService.createSlider(elem, {
           slides: Number(attrs.jslSliderDisplay),
           steps: Number(attrs.jslSliderSteps)
         });
 
-        var prev = angular.element('<button>Prev</button>');
+        elem[0].classList.add('jsl-slider-wrapper');
+
+        var prev = angular.element('<button class="jsl-slider-prev">.</button>');
         prev[0].onclick = slider.movePrev;
         elem[0].appendChild(prev[0]);
 
-        var next = angular.element('<button>Next</button>');
+        var next = angular.element('<button class="jsl-slider-next">.</button>');
         next[0].onclick = slider.moveNext;
         elem[0].appendChild(next[0]);
 
