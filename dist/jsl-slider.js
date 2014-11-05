@@ -3,7 +3,7 @@
 angular.module('jsl.slider', []);
 
 angular.module('jsl.slider')
-  .directive('jslSlider', function($jslSliderService) {
+  .directive('jslSlider', ['$jslSliderService', function($jslSliderService) {
     return {
       restrict: 'A',
       link: function(scope, elem, attrs) {
@@ -24,9 +24,9 @@ angular.module('jsl.slider')
 
       }
     }
-  });
+  }]);
 
-angular.module('jsl.slider').factory('$jslSliderService', function($jslSliderStyleService) {
+angular.module('jsl.slider').factory('$jslSliderService', ['$jslSliderStyleService', function($jslSliderStyleService) {
 
   function createSlider(element, config) {
     if (config === undefined)
@@ -92,7 +92,7 @@ angular.module('jsl.slider').factory('$jslSliderService', function($jslSliderSty
   return {
     createSlider: createSlider
   };
-});
+}]);
 
 angular.module('jsl.slider').factory('$jslSliderStyleService', function() {
 
