@@ -1,6 +1,6 @@
 {
   "name": "jsl-slider",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "",
   "main": "Gruntfile.js",
   "directories": {
@@ -25,6 +25,8 @@
     "karma-mocha": "~0.1.9",
     "chai": "~1.9.2",
     "karma-chai": "~0.1.0",
-    "grunt-contrib-connect": "~0.8.0"
+    "grunt-contrib-connect": "~0.8.0",
+    "grunt-contrib-concat": "~0.5.0",
+    "grunt-contrib-uglify": "~0.6.0"
   }
 }

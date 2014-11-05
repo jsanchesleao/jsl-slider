@@ -14,7 +14,8 @@ module.exports = function(grunt) {
     clean: {
       src: ['.tmp/src'],
       test: ['.tmp/test'],
-      all: ['.tmp']
+      all: ['.tmp'],
+      dist: ['dist']
     },
     karma: {
       unit: {
@@ -30,6 +31,28 @@ module.exports = function(grunt) {
           open: true
         }
       }
+    },
+    bowerJson: grunt.file.readJSON('bower.json'),
+    concat: {
+      dist: {
+        options: {
+          banner: '(function(){\n"use strict";\n',
+          footer: '}());',
+          process: function(src, filepath) {
+            return src.replace(/(^|\n)[ \t]*('use strict'|"use strict");?\s*/g, '$1');
+          },
+        },
+        src: ['.tmp/src/app.js', '.tmp/src/directive/**/*.js', '.tmp/src/service/**/*.js'],
+        dest: 'dist/jsl-slider.js',
+      },
+    },
+    uglify: {
+      dist: {
+        files: [{
+          src: 'dist/jsl-slider.js',
+          dest: 'dist/jsl-slider.min.js'
+        }]
+      }
     }
 
   });
@@ -37,5 +60,6 @@ module.exports = function(grunt) {
 
   grunt.registerTask('test', ['clean:all', 'shell:transformSrc', 'shell:transformTest', 'karma:unit', 'clean:all']);
   grunt.registerTask('serve', ['clean:src', 'shell:transformSrc', 'connect:dev']);
+  grunt.registerTask('build', ['clean:src', 'clean:dist', 'shell:transformSrc', 'concat:dist', 'uglify:dist', 'clean:src']);
 
 }
