@@ -5,7 +5,10 @@
     "jeferson.leao <jeferson.leao@ideais.com.br>"
   ],
   "description": "carousel plugin for use with angularjs",
-  "main": "dist/jsl-slider.js",
+  "main": [
+    "dist/jsl-slider.js",
+    "dist/jsl-slider.css"
+  ],
   "keywords": [
     "slider",
     "carousel",

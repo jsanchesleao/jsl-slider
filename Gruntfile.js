@@ -53,6 +53,19 @@ module.exports = function(grunt) {
           dest: 'dist/jsl-slider.min.js'
         }]
       }
+    },
+    copy: {
+      distStyles: {
+        src: 'style/jsl-slider.css',
+        dest: 'dist/jsl-slider.css',
+      },
+    },
+    cssmin: {
+      dist: {
+        files: {
+          'dist/jsl-slider.min.css': ['dist/**/*.css']
+        }
+      }
     }
 
   });
@@ -60,6 +73,14 @@ module.exports = function(grunt) {
 
   grunt.registerTask('test', ['clean:all', 'shell:transformSrc', 'shell:transformTest', 'karma:unit', 'clean:all']);
   grunt.registerTask('serve', ['clean:src', 'shell:transformSrc', 'connect:dev']);
-  grunt.registerTask('build', ['clean:src', 'clean:dist', 'shell:transformSrc', 'concat:dist', 'uglify:dist', 'clean:src']);
+  grunt.registerTask('build', [
+    'clean:src',
+    'clean:dist',
+    'shell:transformSrc',
+    'concat:dist',
+    'uglify:dist',
+    'copy:distStyles',
+    'cssmin:dist',
+    'clean:src']);
 
 }

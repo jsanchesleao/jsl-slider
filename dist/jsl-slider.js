@@ -38,7 +38,7 @@ angular.module('jsl.slider').factory('$jslSliderService', function($jslSliderSty
       lis = ul.children;
       position = position || 0;
       slides = config.slides || 1
-      steps = config.steps, slides || 1;
+      steps = config.steps || slides || 1;
 
       $jslSliderStyleService.setUpSliderStyle(element[0], ul, {slides: slides});
     }
