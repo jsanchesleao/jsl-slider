@@ -1,4 +1,4 @@
-angular.module('jsl.slider').factory('$jslSliderService', ($jslSliderStyleService) => {
+angular.module('jsl.slider').factory('$jslSliderService', ['$jslSliderStyleService', ($jslSliderStyleService) => {
 
   function createSlider(element, config = {}) {
 
@@ -57,4 +57,4 @@ angular.module('jsl.slider').factory('$jslSliderService', ($jslSliderStyleServic
   return {
     createSlider: createSlider
   };
-});
+}]);

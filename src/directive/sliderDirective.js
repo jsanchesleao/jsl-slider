@@ -1,5 +1,5 @@
 angular.module('jsl.slider')
-  .directive('jslSlider', ($jslSliderService) => {
+  .directive('jslSlider', ['$jslSliderService', ($jslSliderService) => {
     return {
       restrict: 'A',
       link: (scope, elem, attrs) => {
@@ -20,4 +20,4 @@ angular.module('jsl.slider')
 
       }
     }
-  });
+  }]);
