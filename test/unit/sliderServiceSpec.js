@@ -69,11 +69,11 @@ describe('$jslSliderService', () => {
 
     slider.moveNext();
 
-    expect(slider.getPosition()).to.equal(2);
+    expect(slider.getPosition()).to.equal(1); //this move equals two slides
 
     slider.moveNext();
 
-    expect(slider.getPosition()).to.equal(2); //not moving forward
+    expect(slider.getPosition()).to.equal(1); //not moving forward
   });
 
   it('can refresh the slider after changing something in the dom', () => {

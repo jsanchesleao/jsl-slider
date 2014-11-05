@@ -10,10 +10,11 @@ describe('$jslSliderStyleService', () => {
 
   it('gets the correct margin for the element given a slider configuration state with zero position', () => {
 
-    var margin = service.getMargin({
+    var margin = service.getMarginLeft({
       position: 0,
       size: 5,
-      steps: 1
+      steps: 1,
+      slides: 1
     });
 
     expect(margin).to.equal('0');
@@ -21,13 +22,14 @@ describe('$jslSliderStyleService', () => {
 
   it('gets the correct margin for the element given a slider configuration state', () => {
 
-    var margin = service.getMargin({
+    var margin = service.getMarginLeft({
       position: 2,
       size: 5,
-      steps: 1
+      steps: 1,
+      slides: 1
     });
 
-    expect(margin).to.equal('-40%');
+    expect(margin).to.equal('-200%');
   });
 
 
