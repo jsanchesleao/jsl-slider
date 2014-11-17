@@ -8,7 +8,7 @@ angular.module('jsl.slider')
           steps: Number(attrs.jslSliderSteps)
         });
 
-        elem[0].classList.add('jsl-slider-wrapper');
+        elem[0].className += 'jsl-slider-wrapper';
 
         var prev = angular.element('<button class="jsl-slider-prev">.</button>');
         prev[0].onclick = slider.movePrev;

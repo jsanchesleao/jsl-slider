@@ -1,6 +1,6 @@
 {
   "name": "angular-jsl-slider",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "description": "",
   "main": "Gruntfile.js",
   "directories": {
@@ -15,7 +15,7 @@
     "load-grunt-tasks": "~1.0.0",
     "grunt-6to5": "~1.0.1",
     "grunt": "~0.4.5",
-    "6to5": "~1.10.10",
+    "6to5": "~1.12.4",
     "grunt-shell": "~1.1.1",
     "grunt-contrib-clean": "~0.6.0",
     "karma": "~0.12.24",

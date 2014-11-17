@@ -34,7 +34,7 @@ angular.module('jsl.slider').factory('$jslSliderStyleService', () => {
       lis[i].style.margin = '0';
       lis[i].style.padding = '0';
       lis[i].style.width = formatCssPercentage(100 / (lis.length * config.slides));
-      lis[i].style.float = 'left';
+      lis[i].style.cssFloat = 'left'
       lis[i].style.boxSizing = 'border-box';
     }
   }
