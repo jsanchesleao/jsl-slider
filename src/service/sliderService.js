@@ -6,7 +6,7 @@ angular.module('jsl.slider').factory('$jslSliderService', ['$jslSliderStyleServi
     function initialize() {
       ul = element[0].querySelector('ul');
       lis = ul.children;
-      position = position || 0;
+      position = 0;
       slides = config.slides || 1
       steps = config.steps || slides || 1;
 

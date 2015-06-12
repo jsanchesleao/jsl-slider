@@ -5,10 +5,10 @@ module.exports = function(grunt) {
   grunt.initConfig({
     'shell': {
       transformTest: {
-        command: 'node node_modules/6to5/bin/6to5/index.js test --out-dir .tmp/test'
+        command: 'node_modules/.bin/babel test --out-dir .tmp/test'
       },
       transformSrc: {
-        command: 'node node_modules/6to5/bin/6to5/index.js src --out-dir .tmp/src'
+        command: 'node node_modules/.bin/babel src --out-dir .tmp/src'
       }
     },
     clean: {
@@ -27,7 +27,7 @@ module.exports = function(grunt) {
         options: {
           port: 8001,
           keepalive: true,
-          base: ['demo', 'bower_components', '.tmp'],
+          base: ['demo', 'bower_components', '.tmp', 'style'],
           open: true
         }
       }

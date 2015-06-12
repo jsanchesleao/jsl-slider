@@ -1,7 +1,7 @@
 {
   "name": "angular-jsl-slider",
-  "version": "0.0.4",
-  "description": "",
+  "version": "0.0.5",
+  "description": "Carousel plugin for angularjs apps",
   "main": "Gruntfile.js",
   "directories": {
     "test": "test"
@@ -12,23 +12,22 @@
   "author": "jsanchesleao@gmail.com",
   "license": "BSD-2-Clause",
   "devDependencies": {
-    "load-grunt-tasks": "~1.0.0",
-    "grunt-6to5": "~1.0.1",
-    "grunt": "~0.4.5",
-    "6to5": "~1.12.4",
-    "grunt-shell": "~1.1.1",
-    "grunt-contrib-clean": "~0.6.0",
-    "karma": "~0.12.24",
-    "grunt-karma": "~0.9.0",
-    "karma-phantomjs-launcher": "~0.1.4",
-    "mocha": "~2.0.1",
-    "karma-mocha": "~0.1.9",
+    "babel": "^5.5.6",
     "chai": "~1.9.2",
-    "karma-chai": "~0.1.0",
-    "grunt-contrib-connect": "~0.8.0",
+    "grunt": "~0.4.5",
+    "grunt-contrib-clean": "~0.6.0",
     "grunt-contrib-concat": "~0.5.0",
-    "grunt-contrib-uglify": "~0.6.0",
+    "grunt-contrib-connect": "~0.8.0",
+    "grunt-contrib-copy": "~0.7.0",
     "grunt-contrib-cssmin": "~0.10.0",
-    "grunt-contrib-copy": "~0.7.0"
+    "grunt-contrib-uglify": "~0.6.0",
+    "grunt-karma": "~0.9.0",
+    "grunt-shell": "~1.1.1",
+    "karma": "~0.12.24",
+    "karma-chai": "~0.1.0",
+    "karma-mocha": "~0.1.9",
+    "karma-phantomjs-launcher": "~0.1.4",
+    "load-grunt-tasks": "~1.0.0",
+    "mocha": "~2.0.1"
   }
 }
